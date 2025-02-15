@@ -154,7 +154,7 @@ export default defineConfig({
       },
     },
   ],
-  base: 'https://waseemsadiq.github.io/app.islandroofers.co.uk/',
+  base: '/app.islandroofers.co.uk/',
   server: {
     allowedHosts: true,
   },
