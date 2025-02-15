@@ -2,7 +2,7 @@
   "name": "srcbook-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://waseemsadiq.github.io/app.islandroofers.co.uk",
+  "homepage": "https://waseemsadiq.github.io/app.islandroofers.co.uk/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
