@@ -603,7 +603,17 @@ if (
         return (
           <div>
             <h2 className="text-xl font-semibold mb-4">Your Contact Details</h2>
-            <div className="space-y-4">
+            <form
+              onSubmit={(e) => {
+                e.preventDefault()
+                if (validateContactDetails()) {
+                  nextStep()
+                } else {
+                  alert("Please fill in all required fields correctly.")
+                }
+              }}
+              className="space-y-4"
+            >
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
                 <input
@@ -612,6 +622,9 @@ if (
                   value={quoteData.name}
                   onChange={handleChange}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Jock Thompson"
+                  pattern="[A-Za-z\s]{2,}" 
+                  title="Only letters and spaces allowed"
                   required
                 />
               </div>
@@ -623,6 +636,7 @@ if (
                   value={quoteData.email}
                   onChange={handleChange}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="jock@email.scot"
                   required
                 />
               </div>
@@ -634,6 +648,9 @@ if (
                   value={quoteData.phone}
                   onChange={handleChange}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="07123456789"
+                  pattern="^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$" 
+                  title="Enter a valid UK phone number (e.g., 07123456789)"
                   required
                 />
               </div>
@@ -641,7 +658,7 @@ if (
                 <label className="block text-sm font-medium text-gray-700 mb-1">Address</label>
                 <AddressAutocomplete value={quoteData.address} onChange={handleAddressChange} />
               </div>
-            </div>
+            </form>
           </div>
         )
 
@@ -848,4 +865,3 @@ if (
     </div>
   )
 }
-
