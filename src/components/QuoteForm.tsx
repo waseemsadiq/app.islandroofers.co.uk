@@ -149,8 +149,8 @@ if (
 ) {
     const fetchDistance = async () => {
     const distance = await getRoadDistance(
-        quoteData.latitude,
-        quoteData.longitude,
+        quoteData.latitude as number,
+        quoteData.longitude as number,
         KA56PT.latitude,
         KA56PT.longitude,
     )
