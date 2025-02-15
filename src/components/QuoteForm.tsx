@@ -114,8 +114,6 @@ export default function QuoteForm() {
 
   const steps: Step[] = ["shape", "dimensions", "complexity", "material", "contact", "quote"]
 
-  const getStepNumber = (step: Step) => steps.indexOf(step) + 1
-
   const isStepAccessible = (step: Step) => {
     const stepIndex = steps.indexOf(step)
     const furthestStepIndex = steps.indexOf(furthestStep)
@@ -141,27 +139,27 @@ export default function QuoteForm() {
     return true
   }
 
-  useEffect(() => {
-    if (quoteData.latitude && quoteData.longitude) {
-      const fetchDistance = async () => {
-        const distance = await getRoadDistance(
-          quoteData.latitude,
-          quoteData.longitude,
-          KA56PT.latitude,
-          KA56PT.longitude,
-        )
+useEffect(() => {
+if (typeof quoteData.latitude === 'number' && typeof quoteData.longitude === 'number') {
+    const fetchDistance = async () => {
+    const distance = await getRoadDistance(
+        quoteData.latitude,
+        quoteData.longitude,
+        KA56PT.latitude,
+        KA56PT.longitude,
+    )
 
-        if (distance !== null) {
-          setQuoteData((prev) => ({
-            ...prev,
-            distanceToKA56PT: distance,
-          }))
-        }
-      }
-
-      fetchDistance()
+    if (distance !== null) {
+        setQuoteData((prev) => ({
+        ...prev,
+        distanceToKA56PT: distance,
+        }))
     }
-  }, [quoteData.latitude, quoteData.longitude])
+    }
+
+    fetchDistance()
+}
+}, [quoteData.latitude, quoteData.longitude])
 
   const complexityMultiplier = {
     simple: 1,
