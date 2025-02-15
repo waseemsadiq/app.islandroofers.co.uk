@@ -140,7 +140,13 @@ export default function QuoteForm() {
   }
 
 useEffect(() => {
-if (typeof quoteData.latitude === 'number' && typeof quoteData.longitude === 'number') {
+// Ensure both latitude and longitude are defined numbers
+if (
+    quoteData.latitude !== undefined &&
+    quoteData.longitude !== undefined &&
+    typeof quoteData.latitude === 'number' &&
+    typeof quoteData.longitude === 'number'
+) {
     const fetchDistance = async () => {
     const distance = await getRoadDistance(
         quoteData.latitude,
