@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { Calculator, ArrowRight, ArrowLeft, Printer } from "lucide-react"
+import { ArrowRight, ArrowLeft, Printer } from "lucide-react"
 import RoofShapeSelector from "./RoofShapeSelector"
 import AddressAutocomplete from "./AddressAutocomplete"
 import RoofDimensionDiagram from "./RoofDimensionDiagram"

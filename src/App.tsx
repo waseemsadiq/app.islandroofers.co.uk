@@ -1,4 +1,5 @@
 import './index.css'
+import { Calculator } from "lucide-react"
 import QuoteForm from './components/QuoteForm'
 
 function App() {
