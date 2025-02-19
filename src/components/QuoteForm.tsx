@@ -174,12 +174,12 @@ if (
   }
 
   const materials: MaterialOption[] = [
-    { id: "large-tile", name: "Large tile", pricePerSqm: 80 },
-    { id: "large-tile-reboard", name: "Large tile + re-board", pricePerSqm: 100 },
-    { id: "plain-tile", name: "Plain tile", pricePerSqm: 175 },
-    { id: "plain-tile-reboard", name: "Plain tile + re-board", pricePerSqm: 200 },
-    { id: "slating", name: "Slating", pricePerSqm: 150 },
-    { id: "slating-resarking", name: "Slating + re-sarking", pricePerSqm: 200 },
+    { id: "large-tile", name: "Large tile", pricePerSqm: 110 },
+    { id: "large-tile-reboard", name: "Large tile + re-board", pricePerSqm: 130 },
+    { id: "plain-tile", name: "Plain tile", pricePerSqm: 205 },
+    { id: "plain-tile-reboard", name: "Plain tile + re-board", pricePerSqm: 230 },
+    { id: "slating", name: "Slating", pricePerSqm: 180 },
+    { id: "slating-resarking", name: "Slating + re-sarking", pricePerSqm: 230 },
   ]
 
   const convertToMeters = (value: number) => {
@@ -220,7 +220,7 @@ if (
     // Calculate round trip cost at 45p per mile
     const mileageCost = distance * 2 * 0.45
     // Return the greater of £60 or the mileage cost
-    return Math.max(60, mileageCost)
+    return Math.max(90, mileageCost)
   }
 
   const calculateQuote = () => {

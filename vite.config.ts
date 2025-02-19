@@ -154,7 +154,7 @@ export default defineConfig({
       },
     },
   ],
-  base: '/app.islandroofers.co.uk/',
+  base: '/',
   server: {
     allowedHosts: true,
   },
