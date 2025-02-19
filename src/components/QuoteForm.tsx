@@ -198,18 +198,18 @@ if (
   const calculateArea = () => {
     switch (quoteData.shape) {
       case "rectangle":
-        return convertToMeters(quoteData.length) * convertToMeters(quoteData.width) * 1.35
+        return convertToMeters(quoteData.length) * convertToMeters(quoteData.width) * 1.35 // Adjust for roof pitch
       case "l-shape":
         return (
           convertToMeters(quoteData.length) * convertToMeters(quoteData.width) +
-          convertToMeters(quoteData.lengthB || 0) * convertToMeters(quoteData.widthB || 0) * 1.35
+          convertToMeters(quoteData.lengthB || 0) * convertToMeters(quoteData.widthB || 0) * 1.35 // Adjust for roof pitch
         )
       case "h-shape":
       case "c-shape":
         return (
           convertToMeters(quoteData.length) * convertToMeters(quoteData.width) +
           convertToMeters(quoteData.lengthB || 0) * convertToMeters(quoteData.widthB || 0) +
-          convertToMeters(quoteData.lengthC || 0) * convertToMeters(quoteData.widthC || 0) * 1.35
+          convertToMeters(quoteData.lengthC || 0) * convertToMeters(quoteData.widthC || 0) * 1.35 // Adjust for roof pitch
         )
       default:
         return 0
@@ -703,7 +703,7 @@ if (
                     <p className="font-medium capitalize">{quoteData.shape.replace("-", " ")}</p>
                   </div>
                   <div>
-                    <span className="text-gray-600">Total Area:</span>
+                    <span className="text-gray-600">Estimated Total Area:</span>
                     <p className="font-medium">{calculateArea().toFixed(2)} m²</p>
                   </div>
                   <div>
@@ -795,10 +795,6 @@ if (
 
   return (
     <div className="w-full max-w-2xl p-6 bg-white rounded-lg shadow-lg print:shadow-none">
-      <div className="flex items-center gap-2 mb-6 print:hidden">
-        <Calculator className="w-6 h-6 text-blue-600" />
-        <h2 className="text-2xl font-bold text-gray-800">Roof Quote Calculator</h2>
-      </div>
       <div className="mb-8 print:hidden">
         <div className="flex justify-between mb-2">
           {steps.map((step, index) => (
