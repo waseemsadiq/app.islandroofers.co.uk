@@ -237,7 +237,7 @@ if (
     if (quoteData.distanceToKA56PT && quoteData.distanceToKA56PT > 60) {
       const travelExpenses = calculateTravelExpenses(quoteData.distanceToKA56PT)
       //const accommodationExpenses = (daysNeeded >= 2) ? 100 * daysNeeded || 0 // £100 per day for accommodation
-      const accommodationExpenses = 100 * daysNeeded // £100 per day for accommodation
+      const accommodationExpenses = 200 * daysNeeded // £200 per day for accommodation
       subtotal += travelExpenses + accommodationExpenses
     }
 
