@@ -8,7 +8,7 @@ function App() {
 
       <section className="bg-sky-500 text-white py-20 print:hidden">
           <div className="container mx-auto px-4 text-center">
-              <div className="flex items-center gap-2 mb-4 mx-auto">
+              <div className="flex items-center gap-2 mb-4 items-center justify-center">
                 <Calculator className="w-12 h-12 text-white-600" />
                 <h1 className="text-4xl md:text-6xl font-bold mb-6">Roof Quote Calculator</h1>
               </div>
