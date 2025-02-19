@@ -198,18 +198,18 @@ if (
   const calculateArea = () => {
     switch (quoteData.shape) {
       case "rectangle":
-        return convertToMeters(quoteData.length) * convertToMeters(quoteData.width)
+        return convertToMeters(quoteData.length) * convertToMeters(quoteData.width) * 1.35
       case "l-shape":
         return (
           convertToMeters(quoteData.length) * convertToMeters(quoteData.width) +
-          convertToMeters(quoteData.lengthB || 0) * convertToMeters(quoteData.widthB || 0)
+          convertToMeters(quoteData.lengthB || 0) * convertToMeters(quoteData.widthB || 0) * 1.35
         )
       case "h-shape":
       case "c-shape":
         return (
           convertToMeters(quoteData.length) * convertToMeters(quoteData.width) +
           convertToMeters(quoteData.lengthB || 0) * convertToMeters(quoteData.widthB || 0) +
-          convertToMeters(quoteData.lengthC || 0) * convertToMeters(quoteData.widthC || 0)
+          convertToMeters(quoteData.lengthC || 0) * convertToMeters(quoteData.widthC || 0) * 1.35
         )
       default:
         return 0
