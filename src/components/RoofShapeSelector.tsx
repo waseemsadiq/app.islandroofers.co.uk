@@ -29,24 +29,24 @@ export default function RoofShapeSelector({ selectedShape, onShapeSelect }: Roof
       ),
     },
     {
-      id: 'h-shape',
-      title: 'H-Shaped',
-      svg: (
-        <svg viewBox="0 0 100 100" className="w-full h-full">
-          <path
-            d="M10 20h25v60h-25zM35 35h30v30h-30zM65 20h25v60h-25z"
-            className="fill-current"
-          />
-        </svg>
-      ),
-    },
-    {
       id: 'c-shape',
       title: 'C-Shaped',
       svg: (
         <svg viewBox="0 0 100 100" className="w-full h-full">
           <path
             d="M10 20h80v20h-50v20h50v20h-80v-60z"
+            className="fill-current"
+          />
+        </svg>
+      ),
+    },
+    {
+      id: 'h-shape',
+      title: 'H-Shaped',
+      svg: (
+        <svg viewBox="0 0 100 100" className="w-full h-full">
+          <path
+            d="M10 20h25v60h-25zM35 35h30v30h-30zM65 20h25v60h-25z"
             className="fill-current"
           />
         </svg>
