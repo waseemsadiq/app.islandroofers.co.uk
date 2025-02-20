@@ -199,24 +199,24 @@ if (
     switch (quoteData.shape) {
       case "rectangle":
         return (
-          (convertToMeters(quoteData.length) * convertToMeters(quoteData.width)) * 1.35 // Adjust for roof pitch
-        )
+          convertToMeters(quoteData.length) * convertToMeters(quoteData.width)
+        ) * 1.35 // Adjust for roof pitch
       case "l-shape":
         return (
-          (convertToMeters(quoteData.length) * convertToMeters(quoteData.width) +
-          convertToMeters(quoteData.lengthB || 0) * convertToMeters(quoteData.widthB || 0)) * 1.35 // Adjust for roof pitch
-        )
+          convertToMeters(quoteData.length) * convertToMeters(quoteData.width) +
+          convertToMeters(quoteData.lengthB || 0) * convertToMeters(quoteData.widthB || 0)
+        ) * 1.35 // Adjust for roof pitch
       case "c-shape":
         return (
-          (convertToMeters(quoteData.length) * convertToMeters(quoteData.width) -
-          convertToMeters(quoteData.lengthB || 0) * convertToMeters(quoteData.widthB || 0)) * 1.35 // Adjust for roof pitch
-        )
+          convertToMeters(quoteData.length) * convertToMeters(quoteData.width) -
+          convertToMeters(quoteData.lengthB || 0) * convertToMeters(quoteData.widthB || 0)
+        ) * 1.35 // Adjust for roof pitch
       case "h-shape":
         return (
-          (convertToMeters(quoteData.length) * convertToMeters(quoteData.width) +
+          convertToMeters(quoteData.length) * convertToMeters(quoteData.width) +
           convertToMeters(quoteData.lengthB || 0) * convertToMeters(quoteData.widthB || 0) +
-          convertToMeters(quoteData.lengthC || 0) * convertToMeters(quoteData.widthC || 0)) * 1.35 // Adjust for roof pitch
-        )
+          convertToMeters(quoteData.lengthC || 0) * convertToMeters(quoteData.widthC || 0)
+        ) * 1.35 // Adjust for roof pitch
       default:
         return 0
     }
