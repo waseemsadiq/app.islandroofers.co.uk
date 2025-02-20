@@ -198,18 +198,24 @@ if (
   const calculateArea = () => {
     switch (quoteData.shape) {
       case "rectangle":
-        return convertToMeters(quoteData.length) * convertToMeters(quoteData.width) * 1.35 // Adjust for roof pitch
+        return (
+          (convertToMeters(quoteData.length) * convertToMeters(quoteData.width)) * 1.35 // Adjust for roof pitch
+        )
       case "l-shape":
         return (
-          convertToMeters(quoteData.length) * convertToMeters(quoteData.width) +
-          convertToMeters(quoteData.lengthB || 0) * convertToMeters(quoteData.widthB || 0) * 1.35 // Adjust for roof pitch
+          (convertToMeters(quoteData.length) * convertToMeters(quoteData.width) +
+          convertToMeters(quoteData.lengthB || 0) * convertToMeters(quoteData.widthB || 0)) * 1.35 // Adjust for roof pitch
         )
-      case "h-shape":
       case "c-shape":
         return (
-          convertToMeters(quoteData.length) * convertToMeters(quoteData.width) +
+          (convertToMeters(quoteData.length) * convertToMeters(quoteData.width) -
+          convertToMeters(quoteData.lengthB || 0) * convertToMeters(quoteData.widthB || 0)) * 1.35 // Adjust for roof pitch
+        )
+      case "h-shape":
+        return (
+          (convertToMeters(quoteData.length) * convertToMeters(quoteData.width) +
           convertToMeters(quoteData.lengthB || 0) * convertToMeters(quoteData.widthB || 0) +
-          convertToMeters(quoteData.lengthC || 0) * convertToMeters(quoteData.widthC || 0) * 1.35 // Adjust for roof pitch
+          convertToMeters(quoteData.lengthC || 0) * convertToMeters(quoteData.widthC || 0)) * 1.35 // Adjust for roof pitch
         )
       default:
         return 0
@@ -740,7 +746,7 @@ if (
                     <span className="text-gray-600">Main Width:</span>
                     <p className="font-medium">{formatMeasurement(quoteData.width)}</p>
                   </div>
-                  {(quoteData.shape === "l-shape" || quoteData.shape === "h-shape") &&
+                  {(quoteData.shape === "l-shape" || quoteData.shape === "c-shape" || quoteData.shape === "h-shape") &&
                     quoteData.lengthB &&
                     quoteData.widthB && (
                       <>
