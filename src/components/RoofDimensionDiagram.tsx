@@ -17,7 +17,7 @@ export default function RoofDimensionDiagram({ shape, unit }: RoofDimensionDiagr
             
             {/* Length arrow and label */}
             <line x1="280" y1="40" x2="280" y2="160" className="stroke-blue-500" strokeWidth="2" markerEnd="url(#arrowhead)" markerStart="url(#arrowhead)" />
-            <text x="295" y="100" className="text-sm text-blue-600" textAnchor="start" transform="rotate(90, 295, 100)">Length ({unit})</text>
+            <text x="260" y="105" className="text-sm text-blue-600" textAnchor="start" transform="rotate(90, 295, 100)">Length ({unit})</text>
             
             {/* Arrow markers */}
             <defs>
@@ -39,7 +39,7 @@ export default function RoofDimensionDiagram({ shape, unit }: RoofDimensionDiagr
             
             {/* Main length arrow */}
             <line x1="280" y1="40" x2="280" y2="100" className="stroke-blue-500" strokeWidth="2" markerEnd="url(#arrowhead)" markerStart="url(#arrowhead)" />
-            <text x="295" y="70" className="text-sm text-blue-600" textAnchor="start" transform="rotate(90, 295, 70)">Length ({unit})</text>
+            <text x="250" y="75" className="text-sm text-blue-600" textAnchor="start" transform="rotate(90, 295, 70)">Length ({unit})</text>
             
             {/* Section B width arrow */}
             <line x1="40" y1="180" x2="140" y2="180" className="stroke-green-500" strokeWidth="2" markerEnd="url(#arrowhead-green)" markerStart="url(#arrowhead-green)" />
@@ -47,7 +47,7 @@ export default function RoofDimensionDiagram({ shape, unit }: RoofDimensionDiagr
             
             {/* Section B length arrow */}
             <line x1="20" y1="100" x2="20" y2="160" className="stroke-green-500" strokeWidth="2" markerEnd="url(#arrowhead-green)" markerStart="url(#arrowhead-green)" />
-            <text x="15" y="130" className="text-sm text-green-600" textAnchor="end" transform="rotate(-90, 15, 130)">Length B ({unit})</text>
+            <text x="70" y="125" className="text-sm text-green-600" textAnchor="end" transform="rotate(-90, 15, 130)">Length B ({unit})</text>
             
             <defs>
               <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
@@ -70,7 +70,7 @@ export default function RoofDimensionDiagram({ shape, unit }: RoofDimensionDiagr
             <text x="70" y="15" className="text-sm text-blue-600" textAnchor="middle">Width ({unit})</text>
             
             <line x1="20" y1="40" x2="20" y2="160" className="stroke-blue-500" strokeWidth="2" markerEnd="url(#arrowhead)" markerStart="url(#arrowhead)" />
-            <text x="15" y="100" className="text-sm text-blue-600" textAnchor="end" transform="rotate(-90, 15, 100)">Length ({unit})</text>
+            <text x="60" y="95" className="text-sm text-blue-600" textAnchor="end" transform="rotate(-90, 15, 100)">Length ({unit})</text>
             
             {/* Section B arrows */}
             <line x1="100" y1="70" x2="200" y2="70" className="stroke-green-500" strokeWidth="2" markerEnd="url(#arrowhead-green)" markerStart="url(#arrowhead-green)" />
@@ -84,7 +84,7 @@ export default function RoofDimensionDiagram({ shape, unit }: RoofDimensionDiagr
             <text x="230" y="15" className="text-sm text-purple-600" textAnchor="middle">Width C ({unit})</text>
             
             <line x1="280" y1="40" x2="280" y2="160" className="stroke-purple-500" strokeWidth="2" markerEnd="url(#arrowhead-purple)" markerStart="url(#arrowhead-purple)" />
-            <text x="295" y="100" className="text-sm text-purple-600" textAnchor="start" transform="rotate(90, 295, 100)">Length C ({unit})</text>
+            <text x="245" y="105" className="text-sm text-purple-600" textAnchor="start" transform="rotate(90, 295, 100)">Length C ({unit})</text>
             
             <defs>
               <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
@@ -110,14 +110,14 @@ export default function RoofDimensionDiagram({ shape, unit }: RoofDimensionDiagr
             <text x="150" y="15" className="text-sm text-blue-600" textAnchor="middle">Width ({unit})</text>
             
             <line x1="20" y1="40" x2="20" y2="160" className="stroke-blue-500" strokeWidth="2" markerEnd="url(#arrowhead)" markerStart="url(#arrowhead)" />
-            <text x="15" y="100" className="text-sm text-blue-600" textAnchor="end" transform="rotate(-90, 15, 100)">Length ({unit})</text>
+            <text x="60" y="95" className="text-sm text-blue-600" textAnchor="end" transform="rotate(-90, 15, 100)">Length ({unit})</text>
             
             {/* Section B arrows */}
             <line x1="140" y1="90" x2="260" y2="90" className="stroke-green-500" strokeWidth="2" markerEnd="url(#arrowhead-green)" markerStart="url(#arrowhead-green)" />
-            <text x="200" y="85" className="text-sm text-green-600" textAnchor="middle">Width B ({unit})</text>
+            <text x="200" y="105" className="text-sm text-green-600" textAnchor="middle">Width B ({unit})</text>
             
             <line x1="280" y1="80" x2="280" y2="120" className="stroke-green-500" strokeWidth="2" markerEnd="url(#arrowhead-green)" markerStart="url(#arrowhead-green)" />
-            <text x="295" y="100" className="text-sm text-green-600" textAnchor="start" transform="rotate(90, 295, 100)">Length B ({unit})</text>
+            <text x="245" y="105" className="text-sm text-green-600" textAnchor="start" transform="rotate(90, 295, 100)">Length B ({unit})</text>
             
             <defs>
               <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
