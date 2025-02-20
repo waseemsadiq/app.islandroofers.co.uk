@@ -389,7 +389,11 @@ if (
         {/* Diagram at the top */}
         <div className="mb-6">
           <RoofDimensionDiagram shape={quoteData.shape} unit={quoteData.unit} />
-          <p className="mb-auto mt-2 text-center italic text-sm text-gray-600">Your roof from above</p>
+          <div className="mt-4 p-4 bg-gray-50 rounded-lg">
+            <p className="italic text-sm text-gray-600">
+              Your roof from above
+            </p>
+          </div>
         </div>
 
         {/* Unit selector */}
