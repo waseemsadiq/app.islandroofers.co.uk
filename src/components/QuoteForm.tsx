@@ -539,7 +539,7 @@ if (
       case "shape":
         return (
           <div>
-            <h2 className="text-xl font-semibold mb-4">Select your roof shape</h2>
+            <h2 className="text-xl font-semibold mb-4">Looking at your roof from above, what shape is it?</h2>
             <RoofShapeSelector selectedShape={quoteData.shape} onShapeSelect={handleShapeSelect} />
           </div>
         )
@@ -547,7 +547,7 @@ if (
       case "dimensions":
         return (
           <div>
-            <h2 className="text-xl font-semibold mb-4">Enter the dimensions</h2>
+            <h2 className="text-xl font-semibold mb-4">Measure your building and enter the dimensions</h2>
             {renderDimensionInputs()}
           </div>
         )
@@ -555,7 +555,7 @@ if (
       case "complexity":
         return (
           <div>
-            <h2 className="text-xl font-semibold mb-4">Roof Complexity</h2>
+            <h2 className="text-xl font-semibold mb-4">Complexity - how many angles or valleys etc your roof has</h2>
             <select
               name="complexity"
               value={quoteData.complexity}
@@ -574,7 +574,7 @@ if (
       case "material":
         return (
           <div>
-            <h2 className="text-xl font-semibold mb-4">Select roofing material</h2>
+            <h2 className="text-xl font-semibold mb-4">What materials would you like your roof finished in?</h2>
             <div className="space-y-3">
               {materials.map((material) => (
                 <label
