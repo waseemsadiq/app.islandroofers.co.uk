@@ -225,7 +225,7 @@ if (
   const calculateTravelExpenses = (distance: number) => {
     // Calculate round trip cost at 45p per mile
     const mileageCost = distance * 2 * 0.45
-    // Return the greater of £60 or the mileage cost
+    // Return the greater of £90 or the mileage cost
     return Math.max(90, mileageCost)
   }
 
