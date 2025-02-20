@@ -390,7 +390,7 @@ if (
         <div className="mb-6">
           <RoofDimensionDiagram shape={quoteData.shape} unit={quoteData.unit} />
           <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-            <p className="italic text-sm text-gray-600">
+            <p className="text-center italic text-sm text-gray-600">
               Your roof from above
             </p>
           </div>
